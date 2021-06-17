@@ -2,7 +2,7 @@ package com.tw.academy.basic.$7_long_method;
 
 
 public class OrderReceipt {
-    private Order order;
+    private final Order order;
 
     public OrderReceipt(Order order) {
         this.order = order;
