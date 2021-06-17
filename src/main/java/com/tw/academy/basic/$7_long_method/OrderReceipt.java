@@ -1,8 +1,6 @@
 package com.tw.academy.basic.$7_long_method;
 
 
-import sun.dc.pr.PRError;
-
 public class OrderReceipt {
     private static final String SALES_TAX = "Sales Tax";
     private static final String TOTAL_AMOUNT = "Total Amount";
@@ -22,8 +20,8 @@ public class OrderReceipt {
         receiptInfos.append(NEW_LINE);
         receiptInfos.append(order.getCustomerName());
         receiptInfos.append(order.getCustomerAddress());
-        double totSalesTx = 0d;
-        double tot = 0d;
+        double totalSalesTax = 0d;
+        double orderTotalAmount = 0d;
         for (LineItem lineItem : order.getLineItems()) {
             receiptInfos.append(lineItem.getDescription());
             receiptInfos.append(TABS);
@@ -35,14 +33,13 @@ public class OrderReceipt {
             receiptInfos.append(NEW_LINE);
 
             double salesTax = lineItem.totalAmount() * DISCOUNT_NUMBER;
-            totSalesTx += salesTax;
-
-            tot += lineItem.totalAmount() + salesTax;
+            totalSalesTax += salesTax;
+            orderTotalAmount += lineItem.totalAmount() + salesTax;
         }
 
-        receiptInfos.append(SALES_TAX).append(TABS).append(totSalesTx);
+        receiptInfos.append(SALES_TAX).append(TABS).append(totalSalesTax);
 
-        receiptInfos.append(TOTAL_AMOUNT).append(TABS).append(tot);
+        receiptInfos.append(TOTAL_AMOUNT).append(TABS).append(orderTotalAmount);
         return receiptInfos.toString();
     }
 }
