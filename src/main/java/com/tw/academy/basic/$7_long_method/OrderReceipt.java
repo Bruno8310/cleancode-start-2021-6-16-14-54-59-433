@@ -1,12 +1,6 @@
 package com.tw.academy.basic.$7_long_method;
 
-/**
- * This class is a example for bad smell;
- *
- * @author  Thoughtworks
- * @version 1.0
- * @since   2018-1-1
- */
+
 public class OrderReceipt {
     private Order o;
 
