@@ -19,7 +19,7 @@ public class OrderReceipt {
         this.order = order;
     }
 
-    public String printReceipt() {
+    public String generateReceiptInfos() {
         StringBuilder receiptInfos = new StringBuilder();
         receiptInfos.append(PRINT_INFO_HEAD);
         receiptInfos.append(NEW_LINE);
