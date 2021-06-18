@@ -8,4 +8,5 @@
 ####7.Line11: Delete todo
 ####8.Line4-12: Extract all constant strings and characters
 ####9.Line23-24: Rename totSalesTx and tot into totalSalesTax and orderTotalAmount
+####10. Line44-57: Add a calcuTotalSalesTaxAndTotalAmount method and final String filed
   
